@@ -16,17 +16,17 @@
 
 
 
-#if(!file.exists("./data"))(dir.create("./data"))
-#fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-#download.file(fileUrl,destfile="./data/Dataset.zip")
+if(!file.exists("./data"))(dir.create("./data"))
+fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+download.file(fileUrl,destfile="./data/Dataset.zip")
 
 
 # Clean up workspace
-#unzip(zipfile="./data/Dataset.zip",exdir="./data")
+unzip(zipfile="./data/Dataset.zip",exdir="./data")
 
-#pathData <- file.path("./data","UCI HAR Dataset")
-#files <- list.files(pathData,recursive=TRUE)
-#files
+pathData <- file.path("./data","UCI HAR Dataset")
+files <- list.files(pathData,recursive=TRUE)
+files
 
 
 library(reshape2)
